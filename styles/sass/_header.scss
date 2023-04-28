@@ -1,2 +1,6 @@
-@use "./variables";
-@use "./mixins";
+@use "./variables" as *;
+@use "./mixins" as *;
+
+header {
+    scroll-snap-align: start;
+}

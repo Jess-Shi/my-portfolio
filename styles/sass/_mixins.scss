@@ -1,1 +1,16 @@
-@use "./variables";
+@use "./variables" as *;
+
+@mixin font($font-size: 1rem, $line-height: 1.25rem, $font-weight: 400, $text-transform: none, $colour: $primary-font-colour) {
+    font-size: $font-size;
+    line-height: $line-height;
+    font-weight: $font-weight;
+    text-transform: $text-transform;
+    color: $colour;
+}
+
+@mixin flex($flex-direction: row, $justify-content: space-between, $align-items: center) {
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}

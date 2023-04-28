@@ -1,0 +1,36 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.wrapper {
+    width: 60%;
+    max-width: 1152px;
+    margin: 0 auto;
+}
+
+.section-heading {
+    position: relative;
+
+    h2 {
+        @include font(3.5rem, 3.5rem, 800, uppercase);
+
+        span {
+            color: var(--accent-colour);
+        }
+    }
+
+    .heading-background {
+        @include font(6rem, 6rem, 800, uppercase, $heading-background);
+        letter-spacing: 6px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -10;
+    }
+}
+
+section {
+    min-height: 100vh;
+    scroll-snap-align: start;
+}
+
