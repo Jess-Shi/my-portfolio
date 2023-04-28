@@ -1,4 +1,3 @@
-@use "./variables" as *;
 @use "./mixins" as *;
 
 html {
@@ -9,8 +8,8 @@ html {
 
 body {
     @include font();
-    font-family: $font-stack;
-    background: $body-background;
+    font-family: var(--font-stack);
+    background: var(--body-background);
     text-align: center;
 }
 
@@ -24,7 +23,7 @@ a {
 }
 
 button {
-    font-family: $font-stack;
+    font-family: var(--font-stack);
 }
 
 img {

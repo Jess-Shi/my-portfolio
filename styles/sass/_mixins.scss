@@ -1,6 +1,4 @@
-@use "./variables" as *;
-
-@mixin font($font-size: 1rem, $line-height: 1.25rem, $font-weight: 400, $text-transform: none, $colour: $primary-font-colour) {
+@mixin font($font-size: 1rem, $line-height: 1.25rem, $font-weight: 400, $text-transform: none, $colour: var(--primary-font-colour)) {
     font-size: $font-size;
     line-height: $line-height;
     font-weight: $font-weight;

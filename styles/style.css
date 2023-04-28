@@ -1,3 +1,15 @@
+:root {
+  --accent-colour: #ffb400;
+  --primary-font-colour: #ffffff;
+  --secondary-font-colour: #bbbbbb;
+  --tertiary-font-colour: #000000;
+  --body-background: #111111;
+  --heading-background: #212121;
+  --button-background: #2b2a2a;
+  --input-background: #666666;
+  --font-stack: "Poppins", sans-serif;
+}
+
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -226,10 +238,6 @@ html {
   overflow: hidden;
 }
 
-:root {
-  --accent-colour: #ffb400;
-}
-
 html {
   font-size: 20px;
   scroll-behavior: smooth;
@@ -242,9 +250,9 @@ body {
   line-height: 1.25rem;
   font-weight: 400;
   text-transform: none;
-  color: #ffffff;
-  font-family: "Poppins", sans-serif;
-  background: #111111;
+  color: var(--primary-font-colour);
+  font-family: var(--font-stack);
+  background: var(--body-background);
   text-align: center;
 }
 
@@ -257,12 +265,12 @@ a {
   line-height: 1.25rem;
   font-weight: 400;
   text-transform: none;
-  color: #ffffff;
+  color: var(--primary-font-colour);
   text-decoration: none;
 }
 
 button {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-stack);
 }
 
 img {
@@ -288,7 +296,7 @@ header {
   line-height: 3.5rem;
   font-weight: 800;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--primary-font-colour);
 }
 .section-heading h2 span {
   color: var(--accent-colour);
@@ -298,7 +306,7 @@ header {
   line-height: 6rem;
   font-weight: 800;
   text-transform: uppercase;
-  color: #212121;
+  color: var(--heading-background);
   letter-spacing: 6px;
   position: absolute;
   top: 50%;
