@@ -256,7 +256,7 @@ body {
   text-align: center;
 }
 
-h2, ul, li {
+h2, p, ul, li {
   margin: 0;
   padding: 0;
 }
@@ -285,6 +285,17 @@ img {
 
 abbr[title] {
   text-decoration: none;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--accent-colour);
+  border-top: 2px solid var(--accent-colour);
+  padding: 9px 0;
+  scroll-snap-align: start;
 }
 
 header {
