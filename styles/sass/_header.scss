@@ -1,6 +1,42 @@
-@use "./variables";
+@use "./mixins" as *;
 
 header {
-    min-height: 100vh;
+    height: 100vh;
     scroll-snap-align: start;
+
+    nav {
+        position: fixed;
+        right: 3%;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: right;
+
+        ul {
+            @include flex(column, space-evenly, flex-end);
+        }
+
+        li {
+            margin: 12px 0;
+        }
+        
+        a {
+            @include font(1rem, 2rem, 600, uppercase);
+            display: block;
+            background: var(--button-background);
+            padding: 6px 12px 6px 24px;
+            border-radius: 30px;
+
+            &:hover,
+            &:focus {
+                color: var(--tertiary-font-colour);
+                background: var(--accent-colour);
+            }
+        }
+
+        svg {
+            width: 30px;
+            height: 30px;
+            margin-left: 12px;
+        }
+    }
 }

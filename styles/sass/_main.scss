@@ -1,6 +1,6 @@
 @use "./mixins" as *;
 
-.wrapper {
+main.wrapper {
     width: 60%;
     max-width: 1152px;
     margin: 0 auto;
@@ -8,6 +8,7 @@
 
 .section-heading {
     position: relative;
+    margin: 24px 0;
 
     h2 {
         @include font(3.5rem, 3.5rem, 800, uppercase);
@@ -45,13 +46,18 @@ section {
         @include font(1.5rem, 2rem, 600, uppercase);
         @include flex(column);
         width: calc(100%/4);
-        margin-top: 48px;
+        margin: 30px 0;
+        transition: transform 0.25s;
+
+        &:hover {
+            transform: scale(1.3);
+        }
     }
 
     svg, img {
         color: var(--accent-colour);
         width: 96px;
         height: 96px;
-        margin-bottom: 18px;
+        margin-bottom: 12px;
     }
 }

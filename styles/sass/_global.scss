@@ -23,7 +23,6 @@ ul {
 }
 
 a {
-    @include font();
     text-decoration: none;
 }
 
@@ -45,4 +44,8 @@ abbr[title] {
     border-top: 2px solid var(--accent-colour);
     padding: 9px 0;
     scroll-snap-align: start;
+}
+
+*:focus {
+    outline: none;
 }
