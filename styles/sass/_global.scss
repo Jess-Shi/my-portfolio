@@ -13,6 +13,11 @@ body {
     text-align: center;
 }
 
+h2, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
 ul {
     list-style: none;
 }
@@ -29,4 +34,8 @@ button {
 img {
     max-width: 100%;
     height: auto;
+}
+
+abbr[title] {
+    text-decoration: none;
 }

@@ -247,7 +247,7 @@ html {
 
 body {
   font-size: 1rem;
-  line-height: 1.25rem;
+  line-height: 2rem;
   font-weight: 400;
   text-transform: none;
   color: var(--primary-font-colour);
@@ -256,13 +256,18 @@ body {
   text-align: center;
 }
 
+h2, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
 ul {
   list-style: none;
 }
 
 a {
   font-size: 1rem;
-  line-height: 1.25rem;
+  line-height: 2rem;
   font-weight: 400;
   text-transform: none;
   color: var(--primary-font-colour);
@@ -278,7 +283,12 @@ img {
   height: auto;
 }
 
+abbr[title] {
+  text-decoration: none;
+}
+
 header {
+  min-height: 100vh;
   scroll-snap-align: start;
 }
 
@@ -317,6 +327,65 @@ header {
 }
 
 section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   min-height: 100vh;
   scroll-snap-align: start;
+}
+
+.skills ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.skills li {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--primary-font-colour);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 25%;
+  margin-top: 48px;
+}
+.skills svg, .skills img {
+  color: var(--accent-colour);
+  width: 96px;
+  height: 96px;
+  margin-bottom: 18px;
 }

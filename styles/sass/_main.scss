@@ -29,7 +29,29 @@
 }
 
 section {
+    @include flex(column);
     min-height: 100vh;
     scroll-snap-align: start;
 }
 
+.skills {
+
+    ul {
+        @include flex();
+        flex-wrap: wrap;
+    }
+
+    li {
+        @include font(1.5rem, 2rem, 600, uppercase);
+        @include flex(column);
+        width: calc(100%/4);
+        margin-top: 48px;
+    }
+
+    svg, img {
+        color: var(--accent-colour);
+        width: 96px;
+        height: 96px;
+        margin-bottom: 18px;
+    }
+}
