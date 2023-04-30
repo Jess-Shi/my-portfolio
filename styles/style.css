@@ -345,11 +345,10 @@ header h1 span {
 }
 header nav {
   position: fixed;
-  right: 3%;
+  right: 2%;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  text-align: right;
 }
 header nav ul {
   display: -webkit-box;
@@ -370,6 +369,11 @@ header nav li {
   margin: 12px 0;
 }
 header nav a {
+  font-size: 1rem;
+  line-height: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--primary-font-colour);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -383,13 +387,8 @@ header nav a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 1rem;
-  line-height: 2rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: var(--primary-font-colour);
   background: var(--button-background);
-  padding: 7px 12px;
+  padding: 18px;
   border-radius: 30px;
 }
 header nav a:hover, header nav a:focus {
@@ -402,13 +401,17 @@ header nav a:hover span, header nav a:focus span {
   -webkit-transition: width 0.3s linear;
   transition: width 0.3s linear;
 }
+header nav a.displayed {
+  color: var(--tertiary-font-colour);
+  background: var(--accent-colour);
+}
 header nav span {
   display: block;
   width: 0;
   overflow: hidden;
 }
 header nav svg {
-  width: 30px;
+  width: 20px;
 }
 header .header-accent {
   position: absolute;

@@ -35,10 +35,9 @@ header {
 
     nav {
         position: fixed;
-        right: 3%;
+        right: 2%;
         top: 50%;
         transform: translateY(-50%);
-        text-align: right;
 
         ul {
             @include flex(column, space-evenly, flex-end);
@@ -49,10 +48,10 @@ header {
         }
         
         a {
+            @include font(1rem, 1rem, 600, uppercase);
             @include flex();
-            @include font(1rem, 2rem, 600, uppercase);
             background: var(--button-background);
-            padding: 7px 12px;
+            padding: 18px;
             border-radius: 30px;
 
             &:hover,
@@ -66,6 +65,11 @@ header {
                     transition: width 0.3s linear;
                 }
             }
+
+            &.displayed {
+                color: var(--tertiary-font-colour);
+                background: var(--accent-colour);
+            }
         }
 
         span {
@@ -75,7 +79,7 @@ header {
         }
 
         svg {
-            width: 30px;
+            width: 20px;
         }
     }
 
