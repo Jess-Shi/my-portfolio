@@ -13,9 +13,10 @@ body {
     text-align: center;
 }
 
-h1, h2, p, ul, li {
+h1, h2, h3, h4, p, ul, li, fieldset, input, textarea, button {
     margin: 0;
     padding: 0;
+    border: 0;
 }
 
 ul {
@@ -33,19 +34,19 @@ button {
 img {
     max-width: 100%;
     height: auto;
+    display: block;
 }
 
 abbr[title] {
     text-decoration: none;
 }
 
-.copyright {
-    @include font(0.8rem, 1.5rem, 600, uppercase, var(--accent-colour));
-    border-top: 2px solid var(--accent-colour);
-    padding: 9px 0;
-    scroll-snap-align: start;
-}
-
 *:focus {
     outline: none;
+}
+
+.wrapper {
+    width: 60%;
+    max-width: 1152px;
+    margin: 0 auto;
 }

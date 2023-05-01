@@ -1,0 +1,62 @@
+@use "./mixins" as *;
+
+footer {
+    position: relative;
+}
+
+.copyright {
+    @include font(0.8rem, 1.5rem, 600, uppercase, var(--accent-colour));
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 2px solid var(--accent-colour);
+    padding: 9px 0;
+}
+
+.contact-container {
+    @include flex();
+}
+
+.contact-info {
+    width: 30%;
+    padding: 0 36px;
+}
+
+form {
+    width: 70%;
+    margin-bottom: 120px;
+}
+
+input, textarea {
+    @include font(1rem, 1.25rem);
+    background: var(--input-background);
+    padding: 12px 18px;
+    margin-bottom: 24px;
+    border-radius: 24px;
+
+    &::placeholder {
+        @include font(0.8rem, 1.25rem, 500, uppercase);
+    }
+}
+
+.user-info {
+    @include flex();
+
+    input {
+        width: calc(100%/2 - 36px);
+    }
+}
+
+.user-message {
+    @include flex(column);
+
+    input {
+        width: calc(100% - 48px);
+    }
+
+    textarea {
+        width: calc(100% - 48px);
+        height: 240px;
+    }
+}

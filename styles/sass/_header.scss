@@ -6,13 +6,12 @@ header {
     position: relative;
     scroll-snap-align: start;
 
-    .header-photo {
+    .header-image {
         width: 35%;
         height: 100vh;
         padding: 4vh;
 
         img {
-            display: block;
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -23,14 +22,14 @@ header {
 
     .header-text {
         width: 65%;
-    }
-
-    h1 {
-        @include font(4rem, 4rem, 800, uppercase);
 
         span {
             color: var(--accent-colour);
         }
+    }
+
+    h1 {
+        @include font(4rem, 4rem, 800, uppercase);
     }
 
     nav {
@@ -56,7 +55,7 @@ header {
 
             &:hover,
             &:focus {
-                color: var(--tertiary-font-colour);
+                color: var(--secondary-font-colour);
                 background: var(--accent-colour);
 
                 span {
@@ -67,7 +66,7 @@ header {
             }
 
             &.displayed {
-                color: var(--tertiary-font-colour);
+                color: var(--secondary-font-colour);
                 background: var(--accent-colour);
             }
         }

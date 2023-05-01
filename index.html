@@ -14,14 +14,14 @@
 </head>
 <body>
     <header id="home">
-        <div class="header-photo">
+        <div class="header-image">
             <img src="./assets/header-photo.JPG" alt="a lovely photograph of yours truly"/>
         </div>
 
         <div class="header-text">
             <h1>Per Ardua <span>Ad Astra</span></h1>
             <p>Through hardship, to the stars. This is my motto.</p>
-            <p>My name is Jess Shi. I am the most dedicated junior developer you will ever meet.</p>
+            <p>My name is <span>Jess Shi</span>. I am the most dedicated junior developer you will ever meet.</p>
         </div>
         
         <nav>
@@ -55,6 +55,11 @@
                 <div class="heading-background" aria-hidden="true">AboutMe</div>
             </div>
 
+            <div class="about-text">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quibusdam repudiandae, asperiores sunt fugit, corporis hic magnam ullam veniam laborum commodi blanditiis provident facilis ducimus! Ab eligendi quidem repellendus id.</p>
+    
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe dolore aspernatur nostrum non ab veritatis totam qui enim sit fugiat, iste natus, molestias obcaecati suscipit sunt dolorum eum cupiditate earum?  Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ipsum corporis dolore repellat assumenda excepturi quae, laudantium tenetur impedit. Optio consequatur tempora suscipit repellendus! Consequatur nam quos eaque libero nostrum?</p>
+            </div>
         </section>
 
         <section class="skills" id="skills">
@@ -98,19 +103,108 @@
                 <h2>My <span>Projects</span></h2>
                 <div class="heading-background" aria-hidden="true">MyProjects</div>
             </div>
-
+            
+            <ul>
+                <li class="project-container" tabindex="0" aria-label="Hover or focus to view project details">
+                    <div class="project-image">
+                        <img src="https://placekitten.com/800/800" alt="placeholder"/>
+                    </div>
+                    <div class="project-text">
+                        <div>
+                            <h3>Project 1</h3>
+                            <h4>HTML | CSS | JavaScript</h4>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit eius vel quaerat nesciunt iure alias vero repellendus.</p>
+                        <ul class="project-links">
+                            <li><a href="#">View Live</a></li>
+                            <li><a href="#">View Code</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="project-container" tabindex="0" aria-label="Hover or focus to view project details">
+                    <div class="project-image">
+                        <img src="https://placekitten.com/800/500" alt="placeholder"/>
+                    </div>
+                    <div class="project-text">
+                        <div>
+                            <h3>Project 2</h3>
+                            <h4>HTML | CSS | JavaScript</h4>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit eius vel quaerat nesciunt iure alias vero repellendus.</p>
+                        <ul class="project-links">
+                            <li><a href="#">View Live</a></li>
+                            <li><a href="#">View Code</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="project-container" tabindex="0" aria-label="Hover or focus to view project details">
+                    <div class="project-image">
+                        <img src="https://placekitten.com/800/800" alt="placeholder"/>
+                    </div>
+                    <div class="project-text">
+                        <div>
+                            <h3>Project 3</h3>
+                            <h4>HTML | CSS | JavaScript</h4>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit eius vel quaerat nesciunt iure alias vero repellendus.</p>
+                        <ul class="project-links">
+                            <li><a href="#">View Live</a></li>
+                            <li><a href="#">View Code</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="project-container" tabindex="0" aria-label="Hover or focus to view project details">
+                    <div class="project-image">
+                        <img src="https://placekitten.com/800/800" alt="placeholder"/>
+                    </div>
+                    <div class="project-text">
+                        <div>
+                            <h3>Project 4</h3>
+                            <h4>HTML | CSS | JavaScript</h4>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit eius vel quaerat nesciunt iure alias vero repellendus.</p>
+                        <ul class="project-links">
+                            <li><a href="#">View Live</a></li>
+                            <li><a href="#">View Code</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
         </section>
+    </main>
 
+    <footer class="wrapper">
         <section class="contact" id="contact">
             <div class="section-heading">
                 <h2>Contact <span>Me</span></h2>
                 <div class="heading-background" aria-hidden="true">ContactMe</div>
             </div>
 
-        </section>
-    </main>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione corporis ea unde accusamus ex saepe, enim ullam aperiam magni earum provident facilis, sed atque totam consectetur ab.</p>
+                </div>
 
-    <footer>
+                <form>
+                    <fieldset class="user-info">
+                        <label for="name" class="sr-only">Name</label>
+                        <input type="text" id="name" placeholder="Name">
+                        <label for="email" class="sr-only">Email</label>
+                        <input type="email" id="email" placeholder="Email">
+                    </fieldset>
+
+                    <fieldset class="user-message">
+                        <label for="subject" class="sr-only">Subject</label>
+                        <input type="text" id="subject" placeholder="Subject">
+                        <label for="message" class="sr-only">Message</label>
+                        <textarea id="message" placeholder="Message"></textarea>
+                    </fieldset>
+
+                    <button>Send Message</button>
+                </form>
+            </div>
+        </section>
+        
         <p class="copyright">&copy; Jess Shi 2023</p>
     </footer>
 
