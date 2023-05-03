@@ -55,11 +55,16 @@ h2 {
         }
     }
 
-    svg, img {
+    svg {
         color: var(--accent-colour);
+        fill: var(--accent-colour);
         width: 96px;
         height: 96px;
         margin-bottom: 12px;
+
+        g {
+            fill: var(--accent-colour);
+        }
     }
 }
 

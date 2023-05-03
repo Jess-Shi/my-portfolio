@@ -32,6 +32,17 @@ header {
         @include font(4rem, 4rem, 800, uppercase);
     }
 
+    .theme-toggle {
+        position: fixed;
+        top: 36px;
+        right: 36px;
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        color: var(--primary-font-colour);
+        background: var(--theme-button-background);
+    }
+
     nav {
         position: fixed;
         right: 36px;
@@ -43,15 +54,15 @@ header {
         }
 
         li {
-            margin: 12px 0;
+            margin: 9px 0;
         }
         
         a {
             @include font(1rem, 1rem, 600, uppercase);
             @include flex();
             background: var(--button-background);
-            padding: 18px;
-            border-radius: 30px;
+            padding: 15px;
+            border-radius: 25px;
 
             &:hover,
             &:focus {
