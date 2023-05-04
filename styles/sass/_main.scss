@@ -107,7 +107,7 @@ h2 {
     }
 
     h4 {
-        @include font(0.8rem, 0.8rem, 500, uppercase, var(--accent-colour));
+        @include font(0.8rem, 0.8rem, 600, uppercase, var(--accent-colour));
         margin-top: 12px;
     }
 
@@ -130,7 +130,8 @@ h2 {
         &:hover,
         &:focus {
             color: var(--accent-colour);
-            border: 2px solid var(--accent-colour);
+            border: 2px groove var(--accent-colour);
+            background: var(--body-background);
         }
     }
 }

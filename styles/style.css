@@ -1,8 +1,7 @@
 :root {
   --accent-colour: #ffb400;
-  --primary-font-colour: #ffffff;
+  --primary-font-colour: #e6e6e6;
   --secondary-font-colour: #000000;
-  --tertiary-font-colour: #bbbbbb;
   --body-background: #000000;
   --heading-background: #212121;
   --button-background: #2b2a2a;
@@ -351,6 +350,10 @@ header .theme-toggle {
   color: var(--primary-font-colour);
   background: var(--theme-button-background);
 }
+header .theme-toggle:hover, header .theme-toggle:focus {
+  color: var(--secondary-font-colour);
+  background: var(--primary-font-colour);
+}
 header nav {
   position: fixed;
   right: 36px;
@@ -618,7 +621,7 @@ h2 span {
 .project-text h4 {
   font-size: 0.8rem;
   line-height: 0.8rem;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
   color: var(--accent-colour);
   margin-top: 12px;
@@ -660,7 +663,8 @@ h2 span {
 }
 .project-links a:hover, .project-links a:focus {
   color: var(--accent-colour);
-  border: 2px solid var(--accent-colour);
+  border: 2px groove var(--accent-colour);
+  background: var(--body-background);
 }
 
 footer {
@@ -695,6 +699,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 120px;
 }
 
 .contact-info {
@@ -704,54 +709,62 @@ footer {
 
 form {
   width: 70%;
-  margin-bottom: 120px;
 }
 
 input, textarea {
   font-size: 1rem;
-  line-height: 1.25rem;
-  font-weight: 500;
+  line-height: 1.2rem;
+  font-weight: 600;
   text-transform: none;
   color: var(--primary-font-colour);
   background: var(--input-background);
   padding: 12px 18px;
   margin-bottom: 24px;
-  border-radius: 24px;
+  border: 2px solid var(--input-background);
+  border-radius: 26px;
 }
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   font-size: 0.8rem;
   line-height: 1.25rem;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
   color: var(--primary-font-colour);
+  opacity: 0.75;
 }
 input::-moz-placeholder, textarea::-moz-placeholder {
   font-size: 0.8rem;
   line-height: 1.25rem;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
   color: var(--primary-font-colour);
+  opacity: 0.75;
 }
 input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   font-size: 0.8rem;
   line-height: 1.25rem;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
   color: var(--primary-font-colour);
+  opacity: 0.75;
 }
 input::-ms-input-placeholder, textarea::-ms-input-placeholder {
   font-size: 0.8rem;
   line-height: 1.25rem;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
   color: var(--primary-font-colour);
+  opacity: 0.75;
 }
 input::placeholder, textarea::placeholder {
   font-size: 0.8rem;
   line-height: 1.25rem;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
   color: var(--primary-font-colour);
+  opacity: 0.75;
+}
+input:hover, input:focus, textarea:hover, textarea:focus {
+  border: 2px solid var(--accent-colour);
 }
 
 .user-info {

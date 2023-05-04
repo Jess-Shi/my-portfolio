@@ -41,6 +41,12 @@ header {
         border-radius: 25px;
         color: var(--primary-font-colour);
         background: var(--theme-button-background);
+
+        &:hover,
+        &:focus {
+            color: var(--secondary-font-colour);
+            background: var(--primary-font-colour);
+        }
     }
 
     nav {

@@ -1,24 +1,35 @@
 
-
 const setUpThemeToggle = () => {
 
     const lightTheme = {
-        "--accent-colour": "#002266",
-        "--body-background": "#ffffff",
+        "--accent-colour": "#8b0000",
         "--primary-font-colour": "#000000",
+        "--secondary-font-colour": "#e6e6e6",
+        "--body-background": "#e6e6e6",
+        "--heading-background": "#d6d6d6",
+        "--button-background": "#cccccc",
+        "--theme-button-background": "#aaaaaa",
+        "--input-background": "#cdcdcd",
+        "--project-overlay": "#e6e6e6bb",
     }
 
     const darkTheme = {
         "--accent-colour": "#ffb400",
+        "--primary-font-colour": "#e6e6e6",
+        "--secondary-font-colour": "#000000",
         "--body-background": "#000000",
-        "--primary-font-colour": "#ffffff",
+        "--heading-background": "#212121",
+        "--button-background": "#2b2a2a",
+        "--theme-button-background": "#4b4b4b",
+        "--input-background": "#252525",
+        "--project-overlay": "#000000cc",
     }
 
     const themeButton = document.querySelector(".theme-toggle");
 
     themeButton.addEventListener("click", () => {
 
-        if (themeButton.classList.contains("dark-theme")) {
+        if (themeButton.classList.contains("set-light-theme")) {
             for (let key in lightTheme) {
                 document.documentElement.style.setProperty(key, lightTheme[key]);
             }
@@ -31,8 +42,7 @@ const setUpThemeToggle = () => {
             themeButton.innerHTML = `<i class="fa-solid fa-sun" title="Click to toggle light theme">`;
         }
 
-        themeButton.classList.toggle("dark-theme");
-        themeButton.classList.toggle("light-theme");
+        themeButton.classList.toggle("set-light-theme");
     });
 }
 

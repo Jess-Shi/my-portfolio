@@ -16,6 +16,7 @@ footer {
 
 .contact-container {
     @include flex();
+    margin-bottom: 120px;
 }
 
 .contact-info {
@@ -25,18 +26,24 @@ footer {
 
 form {
     width: 70%;
-    margin-bottom: 120px;
 }
 
 input, textarea {
-    @include font(1rem, 1.25rem);
+    @include font(1rem, 1.2rem, 600);
     background: var(--input-background);
     padding: 12px 18px;
     margin-bottom: 24px;
-    border-radius: 24px;
+    border: 2px solid var(--input-background);
+    border-radius: 26px;
 
     &::placeholder {
-        @include font(0.8rem, 1.25rem, 500, uppercase);
+        @include font(0.8rem, 1.25rem, 600, uppercase);
+        opacity: 0.75;
+    }
+
+    &:hover,
+    &:focus {
+        border: 2px solid var(--accent-colour);
     }
 }
 
