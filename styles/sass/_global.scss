@@ -50,3 +50,48 @@ abbr[title] {
     max-width: 1152px;
     margin: 0 auto;
 }
+
+.view-resume,
+.send-message {
+    @include flex();
+    @include font(0.8rem, 1rem, 600, uppercase);
+    position: relative;
+    background: transparent;
+    height: 54px;
+    padding-left: 24px;
+    border: 2px groove var(--accent-colour);
+    border-radius: 27px;
+    overflow: hidden;
+    transition: color 0.5s;
+
+    svg {
+        width: 20px;
+        height: 20px;
+        padding: 15px;
+        margin-left: 12px;
+        border-radius: 27px;
+        color: var(--secondary-font-colour);
+        background: var(--accent-colour);
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: var(--accent-colour);
+        transform: scaleX(0);
+        transform-origin: right;
+        border-radius: 27px;
+        z-index: -10;
+        transition: transform 0.35s ease-out;
+    }
+
+    &:hover,
+    &:focus {
+        color: var(--secondary-font-colour);
+
+        &::before {
+            transform: scaleX(1);
+        }
+    }
+}
