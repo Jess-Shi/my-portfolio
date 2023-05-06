@@ -121,7 +121,7 @@ h2 {
     @include flex();
     
     a {
-        @include font(0.9rem, 0.9rem, 500, uppercase, var(--primary-font-colour));
+        @include font(0.9rem, 0.9rem, 500, uppercase);
         display: block;
         border: 2px solid var(--primary-font-colour);
         padding: 12px;

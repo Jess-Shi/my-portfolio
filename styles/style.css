@@ -312,6 +312,7 @@ header {
   height: 100vh;
   position: relative;
   scroll-snap-align: start;
+  overflow: hidden;
 }
 header .header-image {
   width: 35%;
@@ -341,6 +342,7 @@ header h1 {
   color: var(--primary-font-colour);
 }
 header .theme-toggle {
+  cursor: pointer;
   position: fixed;
   top: 36px;
   right: 36px;
@@ -434,14 +436,6 @@ header .header-accent {
   -webkit-transform: rotate(-15deg);
           transform: rotate(-15deg);
   z-index: -100;
-}
-header .mask {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  top: 100vh;
-  background: var(--body-background);
-  z-index: -90;
 }
 
 section {
@@ -693,39 +687,136 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  text-align: left;
   margin-bottom: 120px;
 }
 
 .contact-info {
-  width: 30%;
-  padding: 0 36px;
+  width: 35%;
+}
+.contact-info h3 {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--primary-font-colour);
+  margin-bottom: 24px;
+}
+.contact-info h3 span {
+  color: var(--accent-colour);
+}
+.contact-info p {
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+  font-weight: 500;
+  text-transform: none;
+  color: var(--primary-font-colour);
+}
+
+.email-and-phone li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 24px 0;
+}
+.email-and-phone li svg {
+  color: var(--accent-colour);
+  width: 48px;
+  height: 48px;
+  margin-right: 12px;
+}
+.email-and-phone li h4 {
+  font-size: 1rem;
+  line-height: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--primary-font-colour);
+}
+.email-and-phone li a {
+  font-size: 0.85rem;
+  line-height: 0.85rem;
+  font-weight: 500;
+  text-transform: none;
+  color: var(--primary-font-colour);
+}
+.email-and-phone li a:hover, .email-and-phone li a:focus {
+  color: var(--accent-colour);
+}
+
+.social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.social-media a {
+  font-size: 1rem;
+  line-height: 1rem;
+  font-weight: 500;
+  text-transform: none;
+  color: var(--primary-font-colour);
+  background: var(--button-background);
+  display: block;
+  width: 48px;
+  height: 48px;
+  padding: 12px;
+  margin-right: 12px;
+  border-radius: 24px;
+}
+.social-media a:hover, .social-media a:focus {
+  color: var(--secondary-font-colour);
+  background: var(--accent-colour);
+}
+.social-media svg {
+  width: 24px;
+  height: 24px;
 }
 
 form {
-  width: 70%;
+  width: 60%;
 }
 
 input, textarea {
   font-size: 1rem;
   line-height: 1.2rem;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: none;
   color: var(--primary-font-colour);
   background: var(--input-background);
-  padding: 12px 18px;
+  width: 100%;
+  padding: 12px 24px;
   margin-bottom: 24px;
-  border: 2px solid var(--input-background);
+  border: 2px groove var(--input-background);
   border-radius: 26px;
 }
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   font-size: 0.8rem;
-  line-height: 1.25rem;
+  line-height: 1.2rem;
   font-weight: 600;
   text-transform: uppercase;
   color: var(--primary-font-colour);
@@ -733,7 +824,7 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
 }
 input::-moz-placeholder, textarea::-moz-placeholder {
   font-size: 0.8rem;
-  line-height: 1.25rem;
+  line-height: 1.2rem;
   font-weight: 600;
   text-transform: uppercase;
   color: var(--primary-font-colour);
@@ -741,7 +832,7 @@ input::-moz-placeholder, textarea::-moz-placeholder {
 }
 input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   font-size: 0.8rem;
-  line-height: 1.25rem;
+  line-height: 1.2rem;
   font-weight: 600;
   text-transform: uppercase;
   color: var(--primary-font-colour);
@@ -749,7 +840,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 input::-ms-input-placeholder, textarea::-ms-input-placeholder {
   font-size: 0.8rem;
-  line-height: 1.25rem;
+  line-height: 1.2rem;
   font-weight: 600;
   text-transform: uppercase;
   color: var(--primary-font-colour);
@@ -757,14 +848,14 @@ input::-ms-input-placeholder, textarea::-ms-input-placeholder {
 }
 input::placeholder, textarea::placeholder {
   font-size: 0.8rem;
-  line-height: 1.25rem;
+  line-height: 1.2rem;
   font-weight: 600;
   text-transform: uppercase;
   color: var(--primary-font-colour);
   opacity: 0.75;
 }
 input:hover, input:focus, textarea:hover, textarea:focus {
-  border: 2px solid var(--accent-colour);
+  border: 2px groove var(--accent-colour);
 }
 
 .user-info {
@@ -775,15 +866,15 @@ input:hover, input:focus, textarea:hover, textarea:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 .user-info input {
-  width: calc(50% - 36px);
+  width: calc(50% - 9px);
 }
 
 .user-message {
@@ -801,10 +892,68 @@ input:hover, input:focus, textarea:hover, textarea:focus {
       -ms-flex-align: center;
           align-items: center;
 }
-.user-message input {
-  width: calc(100% - 48px);
-}
 .user-message textarea {
-  width: calc(100% - 48px);
   height: 240px;
+}
+
+.submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.8rem;
+  line-height: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--primary-font-colour);
+  position: relative;
+  background: transparent;
+  height: 54px;
+  padding-left: 24px;
+  border: 2px groove var(--accent-colour);
+  border-radius: 27px;
+  overflow: hidden;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+}
+.submit svg {
+  width: 18px;
+  height: 18px;
+  padding: 16px;
+  margin-left: 12px;
+  border-radius: 27px;
+  color: var(--secondary-font-colour);
+  background: var(--accent-colour);
+}
+.submit::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--accent-colour);
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  border-radius: 27px;
+  z-index: -10;
+  -webkit-transition: -webkit-transform 0.35s ease-out;
+  transition: -webkit-transform 0.35s ease-out;
+  transition: transform 0.35s ease-out;
+  transition: transform 0.35s ease-out, -webkit-transform 0.35s ease-out;
+}
+.submit:hover, .submit:focus {
+  color: var(--secondary-font-colour);
+}
+.submit:hover::before, .submit:focus::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
