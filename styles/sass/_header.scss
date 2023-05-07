@@ -23,8 +23,10 @@ header {
 }
 
 .header-text {
-    @include flex(column);
+    @include flex(column, space-between, flex-end);
+    text-align: right;
     width: 65%;
+    padding: 0 12vw 0 2vw;
 
     span {
         color: var(--accent-colour);
@@ -33,6 +35,11 @@ header {
 
 h1 {
     @include font(4rem, 4rem, 800, uppercase);
+}
+
+.intro {
+    margin: 24px 0;
+    line-height: 1.5rem;
 }
 
 .header-accent {
