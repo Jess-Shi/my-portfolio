@@ -168,11 +168,9 @@ abbr[title] {
 
 .animated-entry {
     opacity: 0;
-    transform: translateX(-50px);
-    transition: opacity 1s, transform 1s;
+    transition: opacity 1s;
 }
 
 .animated-entry.is-visible {
     opacity: 1;
-    transform: translateX(0);
 }
