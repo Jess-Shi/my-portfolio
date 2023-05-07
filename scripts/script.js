@@ -46,8 +46,8 @@ const setUpThemeToggle = () => {
     });
 }
 
-const displayPageLocation = () => {
-
+const observeSections = () => {
+    
     const options = {
         threshold: 0.5
     }
@@ -59,9 +59,11 @@ const displayPageLocation = () => {
             const sectionLink = document.querySelector(`a[href="#${entry.target.id}"]`);
     
             if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
                 sectionLink.classList.add("displayed");
     
             } else {
+                entry.target.classList.remove("is-visible");
                 sectionLink.classList.remove("displayed");
             }
         })
@@ -76,4 +78,4 @@ const displayPageLocation = () => {
 }
 
 setUpThemeToggle();
-displayPageLocation();
+observeSections();
