@@ -772,7 +772,7 @@ footer {
 }
 
 .copyright {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   line-height: 1.5rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -783,6 +783,12 @@ footer {
   right: 0;
   border-top: 2px solid var(--accent-colour);
   padding: 9px 0;
+}
+.copyright a {
+  color: var(--accent-colour);
+}
+.copyright a:hover, .copyright a:focus {
+  color: var(--primary-font-colour);
 }
 
 .contact-container {

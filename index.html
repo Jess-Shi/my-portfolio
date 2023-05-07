@@ -13,45 +13,46 @@
     <title>Per Ardua Ad Astra</title>
 </head>
 <body>
-    <button class="theme-toggle set-light-theme"><i class="fa-solid fa-sun" title="Click to toggle light theme"></i></button>
-    
-    <nav class="fixed-nav">
-        <ul>
-            <li>
-                <a href="#home"><span>Home</span><i class="fa-solid fa-home"></i></a>
-            </li>
-            <li>
-                <a href="#about"><span>About</span><i class="fa-solid fa-pen-nib"></i></a>
-            </li>
-            <li>
-                <a href="#skills"><span>Skills</span><i class="fa-solid fa-keyboard"></i></a>
-            </li>
-            <li>
-                <a href="#projects"><span>Projects</span><i class="fa-solid fa-briefcase"></i></a>
-            </li>
-            <li>
-                <a href="#contact"><span>Contact</span><i class="fa-solid fa-envelope-open"></i></a>
-            </li>
-        </ul>
-    </nav>
-
-    <header class="animated-entry" id="home">
+    <header class="animated-entry" id="home" tabindex="0">
         <div class="header-image">
             <img src="./assets/header-photo.JPG" alt="a lovely photograph of yours truly"/>
         </div>
-
+        
         <div class="header-text">
             <h1>Per Ardua <span>Ad Astra</span></h1>
             <p>Through hardship, to the stars. This is my motto.</p>
             <p>My name is <span>Jess Shi</span>. I am the most dedicated junior developer you will ever meet.</p>
             <a href="./assets/Jess-Shi-Resume.pdf" target="_blank" class="view-resume">View Resume<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
         </div>
-
+        
         <div class="header-accent"></div>
     </header>
 
+    <div>
+        <button class="theme-toggle set-light-theme"><i class="fa-solid fa-sun" title="Click to toggle light theme"></i></button>
+        <nav class="fixed-nav">
+            <ul>
+                <li>
+                    <a href="#home"><span>Home</span><i class="fa-solid fa-home"></i></a>
+                </li>
+                <li>
+                    <a href="#about"><span>About</span><i class="fa-solid fa-pen-nib"></i></a>
+                </li>
+                <li>
+                    <a href="#skills"><span>Skills</span><i class="fa-solid fa-keyboard"></i></a>
+                </li>
+                <li>
+                    <a href="#projects"><span>Projects</span><i class="fa-solid fa-briefcase"></i></a>
+                </li>
+                <li>
+                    <a href="#contact"><span>Contact</span><i class="fa-solid fa-envelope-open"></i></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
     <main class="wrapper">
-        <section class="about animated-entry" id="about">
+        <section class="about animated-entry" id="about" tabindex="0">
             <div class="section-heading">
                 <h2>About <span>Me</span></h2>
                 <div class="heading-background" aria-hidden="true">AboutMe</div>
@@ -64,7 +65,7 @@
             </div>
         </section>
 
-        <section class="skills animated-entry" id="skills">
+        <section class="skills animated-entry" id="skills" tabindex="0">
             <div class="section-heading">
                 <h2>My <span>Skills</span></h2>
                 <div class="heading-background" aria-hidden="true">MySkills</div>
@@ -100,7 +101,7 @@
             <p>If something you're looking for is not on the list, please bear in mind that I am constantly expanding my skillset, and I could learn quite quickly given sufficient motivation. After all, this awesome list of skills was acquired in the span of three months! Feel free to contact me to discuss your tech stack requirements.</p>
         </section>
 
-        <section class="projects animated-entry" id="projects">
+        <section class="projects animated-entry" id="projects" tabindex="0">
             <div class="section-heading">
                 <h2>My <span>Projects</span></h2>
                 <div class="heading-background" aria-hidden="true">MyProjects</div>
@@ -176,7 +177,7 @@
     </main>
 
     <footer class="wrapper">
-        <section class="contact animated-entry" id="contact">
+        <section class="contact animated-entry" id="contact" tabindex="0">
             <div class="section-heading">
                 <h2>Contact <span>Me</span></h2>
                 <div class="heading-background" aria-hidden="true">ContactMe</div>
@@ -230,7 +231,7 @@
             </div>
         </section>
         
-        <p class="copyright">&copy; Jess Shi 2023</p>
+        <p class="copyright">&copy; Built by Jess Shi, with icons from <a href="https://fontawesome.com/">Font Awesome</a> and <a href="https://icons8.com/">Icons8</a></p>
     </footer>
 
     <script src="./scripts/script.js"></script>

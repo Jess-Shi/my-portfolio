@@ -5,13 +5,22 @@ footer {
 }
 
 .copyright {
-    @include font(0.8rem, 1.5rem, 600, uppercase, var(--accent-colour));
+    @include font(0.7rem, 1.5rem, 600, uppercase, var(--accent-colour));
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     border-top: 2px solid var(--accent-colour);
     padding: 9px 0;
+
+    a {
+        color: var(--accent-colour);
+
+        &:hover,
+        &:focus {
+            color: var(--primary-font-colour);
+        }
+    }
 }
 
 .contact-container {
