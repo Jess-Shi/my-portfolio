@@ -51,8 +51,7 @@ const setUpThemeToggle = () => {
 const observeSections = () => {
     
     const options = {
-        threshold: 0.5,
-        rootMargin: "-75px 0px"
+        threshold: 0.3,
     }
     
     const observer = new IntersectionObserver((entries) => {
@@ -80,5 +79,14 @@ const observeSections = () => {
     });
 }
 
+const displayEmail = () => {
+
+    const encodedEmail = "amVzcy5zaGlAbWFpbC51dG9yb250by5jYQ==";
+    const email = document.querySelector("#email");
+    email.innerHTML = atob(encodedEmail);
+    email.setAttribute("href", "mailto:".concat(atob(encodedEmail)));
+}
+
 setUpThemeToggle();
 observeSections();
+displayEmail();

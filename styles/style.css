@@ -645,8 +645,8 @@ h2 span {
   z-index: -10;
 }
 
-.about-text p {
-  margin: 36px 0;
+.about-text p:not(:last-child) {
+  margin-bottom: 36px;
 }
 
 .skills ul {
@@ -832,6 +832,9 @@ h2 span {
   }
   .heading-background {
     font-size: max(11vw, 45px);
+  }
+  .skills p {
+    margin-top: 36px;
   }
   .project-container {
     width: max(80%, 288px);
