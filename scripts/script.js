@@ -2,7 +2,7 @@
 const setUpThemeToggle = () => {
 
     const lightTheme = {
-        "--accent-colour": "#004bff",
+        "--accent-colour": "#6200ff",
         "--primary-font-colour": "#000000",
         "--secondary-font-colour": "#e6e6e6",
         "--body-background": "#e6e6e6",
