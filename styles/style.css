@@ -430,8 +430,8 @@ abbr[title] {
   width: 20px;
   height: 20px;
 }
-.view-resume::before,
-.send-message::before {
+.view-resume::after,
+.send-message::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -442,6 +442,7 @@ abbr[title] {
           transform-origin: right;
   border-radius: 25px;
   z-index: -10;
+  overflow: hidden;
   -webkit-transition: -webkit-transform 0.35s ease-out;
   transition: -webkit-transform 0.35s ease-out;
   transition: transform 0.35s ease-out;
@@ -452,9 +453,9 @@ abbr[title] {
 .send-message:focus {
   color: var(--secondary-font-colour);
 }
-.view-resume:hover::before, .view-resume:focus::before,
-.send-message:hover::before,
-.send-message:focus::before {
+.view-resume:hover::after, .view-resume:focus::after,
+.send-message:hover::after,
+.send-message:focus::after {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
 }

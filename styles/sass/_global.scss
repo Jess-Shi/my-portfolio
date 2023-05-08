@@ -149,7 +149,7 @@ abbr[title] {
         height: 20px;
     }
 
-    &::before {
+    &::after {
         content: "";
         position: absolute;
         inset: 0;
@@ -158,6 +158,7 @@ abbr[title] {
         transform-origin: right;
         border-radius: 25px;
         z-index: -10;
+        overflow: hidden;
         transition: transform 0.35s ease-out;
     }
 
@@ -165,7 +166,7 @@ abbr[title] {
     &:focus {
         color: var(--secondary-font-colour);
 
-        &::before {
+        &::after {
             transform: scaleX(1);
         }
     }
