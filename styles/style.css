@@ -691,6 +691,11 @@ h2 span {
 }
 
 .about-text {
+  font-size: 1rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+  text-transform: none;
+  color: var(--primary-font-colour);
   text-align: justify;
 }
 .about-text p:not(:last-child) {
@@ -868,6 +873,15 @@ h2 span {
   background: var(--body-background);
 }
 
+@media (max-width: 1260px) {
+  .about-text {
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    text-transform: none;
+    color: var(--primary-font-colour);
+  }
+}
 @media (max-width: 1080px) {
   section {
     min-height: auto;
