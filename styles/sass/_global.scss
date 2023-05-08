@@ -46,8 +46,8 @@ abbr[title] {
 }
 
 .wrapper {
-    width: 60%;
-    max-width: 1152px;
+    width: 1260px;
+    max-width: 80%;
     margin: 0 auto;
 }
 
@@ -173,4 +173,50 @@ abbr[title] {
 
 .animated-entry.is-visible {
     opacity: 1;
+}
+
+@media (max-width: 1080px) {
+
+    html {
+        scroll-snap-type: none;
+    }
+
+    .animated-entry {
+        opacity: 1;
+    }
+
+    .fixed-nav {
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transform: translateY(0);
+
+        ul {
+            @include flex();
+            background: var(--navbar-background);
+        }
+
+        span {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    
+    .wrapper {
+        max-width: 90%;
+    }
+
+    .theme-toggle {
+        top: 12px;
+        right: 12px;
+        width: 42px;
+        height: 42px;
+    }
+
+    .fixed-nav a {
+        padding: 11px;
+    }
 }

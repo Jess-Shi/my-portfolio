@@ -7,6 +7,7 @@ const setUpThemeToggle = () => {
         "--secondary-font-colour": "#e6e6e6",
         "--body-background": "#e6e6e6",
         "--heading-background": "#d6d6d6",
+        "--navbar-background": "#999999",
         "--button-background": "#cccccc",
         "--theme-button-background": "#aaaaaa",
         "--input-background": "#cdcdcd",
@@ -19,6 +20,7 @@ const setUpThemeToggle = () => {
         "--secondary-font-colour": "#000000",
         "--body-background": "#000000",
         "--heading-background": "#212121",
+        "--navbar-background": "#181818",
         "--button-background": "#2b2a2a",
         "--theme-button-background": "#4b4b4b",
         "--input-background": "#252525",
@@ -49,7 +51,8 @@ const setUpThemeToggle = () => {
 const observeSections = () => {
     
     const options = {
-        threshold: 0.5
+        threshold: 0.5,
+        rootMargin: "-75px 0px"
     }
     
     const observer = new IntersectionObserver((entries) => {
