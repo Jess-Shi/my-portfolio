@@ -126,19 +126,19 @@ abbr[title] {
     @include flex();
     @include font(0.8rem, 1rem, 600, uppercase);
     position: relative;
-    background: transparent;
+    background: linear-gradient(to right, transparent 50%, var(--accent-colour) 50%) left center / 200% 100%;
     height: 54px;
     padding-left: 24px;
     border: 2px solid var(--accent-colour);
     border-radius: 27px;
     overflow: hidden;
-    transition: color 0.5s;
+    transition: color 0.5s, background-position 0.35s ease-out;
 
     span {
-        width: 50px;
-        height: 50px;
-        padding: 15px;
-        border-radius: 25px;
+        width: 54px;
+        height: 54px;
+        padding: 17px;
+        border-radius: 27px;
         margin-left: 12px;
         background: var(--accent-colour);
     }
@@ -149,26 +149,10 @@ abbr[title] {
         height: 20px;
     }
 
-    &::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: var(--accent-colour);
-        transform: scaleX(0);
-        transform-origin: right;
-        border-radius: 25px;
-        z-index: -10;
-        overflow: hidden;
-        transition: transform 0.35s ease-out;
-    }
-
     &:hover,
     &:focus {
         color: var(--secondary-font-colour);
-
-        &::after {
-            transform: scaleX(1);
-        }
+        background-position: right center;
     }
 }
 
