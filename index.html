@@ -216,16 +216,16 @@
                 <form name="contact-form" method="POST" netlify>
                     <fieldset class="user-info">
                         <label for="user-name" class="sr-only">Name</label>
-                        <input type="text" name="user-name" id="user-name" placeholder="Name">
+                        <input type="text" name="user-name" id="user-name" placeholder="Name" required>
                         <label for="user-email" class="sr-only">Email</label>
-                        <input type="email" name="user-email" id="user-email" placeholder="Email">
+                        <input type="email" name="user-email" id="user-email" placeholder="Email" required>
                     </fieldset>
 
                     <fieldset class="user-message">
                         <label for="subject" class="sr-only">Subject</label>
                         <input type="text" name="subject" id="subject" placeholder="Subject">
                         <label for="message" class="sr-only">Message</label>
-                        <textarea name="message" id="message" placeholder="Message"></textarea>
+                        <textarea name="message" id="message" placeholder="Message" required></textarea>
                     </fieldset>
 
                     <button class="send-message">Send Message<i class="fa-solid fa-paper-plane"></i></button>

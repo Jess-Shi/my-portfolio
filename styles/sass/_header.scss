@@ -37,9 +37,14 @@ h1 {
     @include font(4rem, 4rem, 800, uppercase);
 }
 
+.motto {
+    margin-top: 6px;
+    @include font(0.9rem, 1.25rem);
+}
+
 .intro {
-    margin: 24px 0;
-    line-height: 1.5rem;
+    @include font(1.1rem, 1.5rem);
+    margin: 30px 0;
 }
 
 .header-accent {
@@ -51,4 +56,47 @@ h1 {
     background: var(--accent-colour);
     transform: rotate(-15deg);
     z-index: -100;
+}
+
+@media (max-width: 1080px) {
+    
+    header {
+        @include flex(column, center);
+    }
+
+    .header-image {
+        width: max(40vw, 240px);
+        height: max(40vw, 240px);
+        padding: 0;
+        margin: 36px 0;
+
+        img {
+            border: 6px solid var(--accent-colour);
+            border-radius: 50%;
+        }
+    }
+
+    .header-text {
+        width: 90%;
+        align-items: center;
+        text-align: center;
+        padding: 0;
+        margin-bottom: 5vh;
+    }
+
+    h1 {
+        font-size: max(7vw, 45px);
+        line-height: max(7vw, 45px);
+    }
+
+    .header-accent {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .intro {
+        font-size: 1rem;
+    }
 }
