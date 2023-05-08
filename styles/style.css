@@ -690,8 +690,11 @@ h2 span {
   z-index: -10;
 }
 
+.about-text {
+  text-align: justify;
+}
 .about-text p:not(:last-child) {
-  margin-bottom: 36px;
+  margin-bottom: 24px;
 }
 
 .skills ul {

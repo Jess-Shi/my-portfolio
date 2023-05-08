@@ -30,9 +30,10 @@ h2 {
 }
 
 .about-text {
+    text-align: justify;
 
     p:not(:last-child) {
-        margin-bottom: 36px;
+        margin-bottom: 24px;
     }
 }
 
