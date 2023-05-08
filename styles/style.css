@@ -409,7 +409,7 @@ abbr[title] {
   background: transparent;
   height: 54px;
   padding-left: 24px;
-  border: 2px groove var(--accent-colour);
+  border: 2px solid var(--accent-colour);
   border-radius: 27px;
   overflow: hidden;
   -webkit-transition: color 0.5s;
@@ -910,6 +910,16 @@ h2 span {
     -webkit-transform: translate(-50%, -55%);
             transform: translate(-50%, -55%);
   }
+  .project-text h3 {
+    font-size: 1.25rem;
+  }
+  .project-text p {
+    font-size: 0.8rem;
+  }
+  .project-links a {
+    font-size: 0.8rem;
+    padding: 9px;
+  }
 }
 footer {
   position: relative;
@@ -1067,7 +1077,7 @@ input, textarea {
   width: 100%;
   padding: 12px 24px;
   margin-bottom: 24px;
-  border: 2px groove var(--input-background);
+  border: 2px solid var(--input-background);
   border-radius: 26px;
 }
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
@@ -1111,7 +1121,7 @@ input::placeholder, textarea::placeholder {
   opacity: 0.75;
 }
 input:hover, input:focus, textarea:hover, textarea:focus {
-  border: 2px groove var(--accent-colour);
+  border: 2px solid var(--accent-colour);
 }
 
 .user-info {

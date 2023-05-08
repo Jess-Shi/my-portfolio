@@ -171,4 +171,20 @@ h2 {
         letter-spacing: -3px;
         transform: translate(-50%, -55%);
     }
+
+    .project-text {
+
+        h3 {
+            font-size: 1.25rem;
+        }
+
+        p {
+            font-size: 0.8rem;
+        }
+    }
+
+    .project-links a {
+        font-size: 0.8rem;
+        padding: 9px;
+    }
 }

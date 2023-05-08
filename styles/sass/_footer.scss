@@ -110,7 +110,7 @@ input, textarea {
     width: 100%;
     padding: 12px 24px;
     margin-bottom: 24px;
-    border: 2px groove var(--input-background);
+    border: 2px solid var(--input-background);
     border-radius: 26px;
 
     &::placeholder {
@@ -120,7 +120,7 @@ input, textarea {
 
     &:hover,
     &:focus {
-        border: 2px groove var(--accent-colour);
+        border: 2px solid var(--accent-colour);
     }
 }
 
