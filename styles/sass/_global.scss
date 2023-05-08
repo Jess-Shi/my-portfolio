@@ -134,14 +134,19 @@ abbr[title] {
     overflow: hidden;
     transition: color 0.5s;
 
+    span {
+        width: 50px;
+        height: 50px;
+        padding: 15px;
+        border-radius: 25px;
+        margin-left: 12px;
+        background: var(--accent-colour);
+    }
+    
     svg {
+        color: var(--secondary-font-colour);
         width: 20px;
         height: 20px;
-        padding: 15px;
-        margin-left: 12px;
-        border-radius: 27px;
-        color: var(--secondary-font-colour);
-        background: var(--accent-colour);
     }
 
     &::before {
@@ -151,7 +156,7 @@ abbr[title] {
         background: var(--accent-colour);
         transform: scaleX(0);
         transform-origin: right;
-        border-radius: 27px;
+        border-radius: 25px;
         z-index: -10;
         transition: transform 0.35s ease-out;
     }

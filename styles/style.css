@@ -415,15 +415,20 @@ abbr[title] {
   -webkit-transition: color 0.5s;
   transition: color 0.5s;
 }
+.view-resume span,
+.send-message span {
+  width: 50px;
+  height: 50px;
+  padding: 15px;
+  border-radius: 25px;
+  margin-left: 12px;
+  background: var(--accent-colour);
+}
 .view-resume svg,
 .send-message svg {
+  color: var(--secondary-font-colour);
   width: 20px;
   height: 20px;
-  padding: 15px;
-  margin-left: 12px;
-  border-radius: 27px;
-  color: var(--secondary-font-colour);
-  background: var(--accent-colour);
 }
 .view-resume::before,
 .send-message::before {
@@ -435,7 +440,7 @@ abbr[title] {
           transform: scaleX(0);
   -webkit-transform-origin: right;
           transform-origin: right;
-  border-radius: 27px;
+  border-radius: 25px;
   z-index: -10;
   -webkit-transition: -webkit-transform 0.35s ease-out;
   transition: -webkit-transform 0.35s ease-out;
