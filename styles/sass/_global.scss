@@ -1,4 +1,3 @@
-@use "./variables" as *;
 @use "./mixins" as *;
 
 html {
@@ -9,9 +8,15 @@ html {
 
 body {
     @include font();
-    font-family: $font-stack;
-    background: $body-background;
+    font-family: var(--font-stack);
+    background: var(--body-background);
     text-align: center;
+}
+
+h1, h2, h3, h4, p, ul, li, fieldset, input, textarea, button {
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 
 ul {
@@ -19,15 +24,189 @@ ul {
 }
 
 a {
-    @include font();
     text-decoration: none;
 }
 
 button {
-    font-family: $font-stack;
+    font-family: var(--font-stack);
 }
 
 img {
     max-width: 100%;
     height: auto;
+    display: block;
+}
+
+abbr[title] {
+    text-decoration: none;
+}
+
+*:focus {
+    outline: none;
+}
+
+.wrapper {
+    width: 1260px;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.theme-toggle {
+    cursor: pointer;
+    position: fixed;
+    top: 36px;
+    right: 36px;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    color: var(--primary-font-colour);
+    background: var(--theme-button-background);
+    z-index: 10;
+
+    &:hover,
+    &:focus {
+        color: var(--secondary-font-colour);
+        background: var(--primary-font-colour);
+    }
+}
+
+.fixed-nav {
+    position: fixed;
+    right: 36px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+
+    ul {
+        @include flex(column, space-evenly, flex-end);
+    }
+
+    li {
+        margin: 9px 0;
+    }
+    
+    a {
+        @include font(1rem, 1rem, 600, uppercase);
+        @include flex();
+        background: var(--button-background);
+        padding: 15px;
+        border-radius: 25px;
+
+        &:hover,
+        &:focus {
+            color: var(--secondary-font-colour);
+            background: var(--accent-colour);
+
+            span {
+                width: 100%;
+                margin-right: 12px;
+                transition: width 0.3s linear;
+            }
+        }
+
+        &.displayed {
+            color: var(--secondary-font-colour);
+            background: var(--accent-colour);
+        }
+    }
+
+    span {
+        display: block;
+        width: 0;
+        overflow: hidden;
+    }
+
+    svg {
+        width: 20px;
+    }
+}
+
+.view-resume,
+.send-message {
+    @include flex();
+    @include font(0.8rem, 1rem, 600, uppercase);
+    position: relative;
+    background: linear-gradient(to right, transparent 50%, var(--accent-colour) 50%) left center / 200% 100%;
+    height: 54px;
+    padding-left: 24px;
+    border: 2px solid var(--accent-colour);
+    border-radius: 27px;
+    overflow: hidden;
+    transition: color 0.5s, background-position 0.35s ease-out;
+
+    span {
+        width: 54px;
+        height: 54px;
+        padding: 17px;
+        border-radius: 27px;
+        margin-left: 12px;
+        background: var(--accent-colour);
+    }
+    
+    svg {
+        color: var(--secondary-font-colour);
+        width: 20px;
+        height: 20px;
+    }
+
+    &:hover,
+    &:focus {
+        color: var(--secondary-font-colour);
+        background-position: right center;
+    }
+}
+
+.animated-entry {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.animated-entry.is-visible {
+    opacity: 1;
+}
+
+@media (max-width: 1080px) {
+
+    html {
+        scroll-snap-type: none;
+    }
+
+    .animated-entry {
+        opacity: 1;
+    }
+
+    .fixed-nav {
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transform: translateY(0);
+
+        ul {
+            @include flex();
+            background: var(--navbar-background);
+        }
+
+        span {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    
+    .wrapper {
+        max-width: 90%;
+    }
+
+    .theme-toggle {
+        top: 12px;
+        right: 12px;
+        width: 42px;
+        height: 42px;
+    }
+
+    .fixed-nav a {
+        padding: 11px;
+    }
 }
